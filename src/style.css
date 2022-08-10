@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif,
+  font-family:
+    'Poppins',
     sans-serif;
 }
 
@@ -49,7 +50,7 @@ body {
   outline: none;
   font-size: 18px;
   padding: 0 20px 0 3px;
-  border: 1px solid #bfbfbf
+  border: 1px solid #bfbfbf;
 }
 
 .task-input input::placeholder {
@@ -151,7 +152,7 @@ li {
 
 .task-menu li {
   height: 25px;
-  font-size: 160x;
+  font-size: 160px;
   padding: 17px 15px;
   margin-bottom: 2px;
   justify-content: flex-start;
