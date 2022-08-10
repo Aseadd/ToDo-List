@@ -1,9 +1,11 @@
 # ToDo-List
+
 This project is Todo list Application
 
 ## 🧰 Built With
 
 - HTML
+- CSS
 - JS-ES6
 - Webpack
 
