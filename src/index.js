@@ -1,4 +1,4 @@
-import _ from 'lodash';
+//import _ from 'lodash';
 import './style.css';
 
 const taskInput = document.querySelector('.task-input input');
