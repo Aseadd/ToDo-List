@@ -15,8 +15,8 @@ const showTodo = () => {
                 <input class='task-item' type="checkbox" id="${id}" ${isCompleted}>
                 <p class='${isCompleted}'> ${todo.name}</p>
               </label>
-              <div class='settings'>
-                <i onclick='showMenu(this)' class='uil uil-ellipsis-v'></i>
+              <div class='settings crosshair'>
+                <i onclick='showMenu(this)' class='uil uil-ellipsis-v crosshair'></i>
                 <ul class='task-menu'>
                   <li><i class='uil uil-trash'></i></li>
                 </ul>

@@ -146,6 +146,10 @@ li {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
+.uil {
+  font-size: 24px;
+}
+
 .settings:hover .task-menu {
   transform: scale(1);
 }
