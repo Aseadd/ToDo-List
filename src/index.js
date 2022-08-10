@@ -53,7 +53,7 @@ taskInput.addEventListener('keyup', (e) => {
     if (!todos) {
       todos = [];
     }
-    let taskInfo = { name: userTask, status: 'pending' };
+    let taskInfo = { name: userTask, status: false };
     todos.push(taskInfo); // adding new task to todos
     localStorage.setItem('todo-list', JSON.stringify(todos));
   }
