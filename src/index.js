@@ -10,7 +10,7 @@ const showTodo = () => {
 
   if (todos) {
     todos.forEach((todo, id) => {
-      let isCompleted = todo.status == 'completed' ? 'checked' : '';
+      const isCompleted = todo.status === 'completed' ? 'checked' : '';
       li += ` <li class="task">
               <label for="${id}">
                 <input class='task-item' type="checkbox" id="${id}" ${isCompleted}>
@@ -48,12 +48,12 @@ showTodo();
 //   localStorage.setItem('todo-list', JSON.stringify(todos));
 // }
 taskInput.addEventListener('keyup', (e) => {
-  let userTask = taskInput.value.trim();
-  if (e.key == 'Enter' && userTask) {
+  const userTask = taskInput.value.trim();
+  if (e.key === 'Enter' && userTask) {
     if (!todos) {
       todos = [];
     }
-    let taskInfo = { name: userTask, status: false };
+    const taskInfo = { name: userTask, status: false };
     todos.push(taskInfo); // adding new task to todos
     localStorage.setItem('todo-list', JSON.stringify(todos));
   }
