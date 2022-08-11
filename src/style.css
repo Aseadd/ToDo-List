@@ -1,179 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display-swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family:
-    'Poppins',
-    sans-serif;
 }
 
 body {
-  background: #f5f5f5;
-  overflow: hidden;
-}
-
-.wrapper {
-  max-width: 500px;
-  margin: 135px auto;
-  background: #fff;
-  border-radius: 7px;
-  padding: 10px 0;
-  box-shadow: 1px 2px 2px 2px #999;
-}
-
-.title {
   display: flex;
-  justify-content: space-between;
-  margin-right: 20px;
-  margin-left: 3px;
-}
-
-.app-title {
-  margin-bottom: 20px;
-  font-size: 20px;
-  opacity: 0.5;
-}
-
-.task-input {
-  width: 100%;
-  height: 52px;
-  padding: 0;
-  position: relative;
-  border-bottom: 1px solid #bfbfbf;
-}
-
-.task-input input {
-  height: 100%;
-  width: 500px;
-  outline: none;
-  font-size: 18px;
-  padding: 0 20px 0 3px;
-  border: 1px solid #bfbfbf;
-}
-
-.task-input input::placeholder {
-  color: #bfbfbf;
-  text-align: left;
-}
-
-.controls,
-li {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
-.controls {
-  padding: 18px 0;
-}
-
-.filters span {
-  margin: 0 2px;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.filters span:first-child {
-  margin-left: 0;
-}
-
-.filters span.active {
-  color: #3c87ff;
-}
-
-.controls .clear-btn {
-  width: 100%;
-  outline: none;
-  border: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 4px;
-  padding: 4px 0;
-  background: #f5f5f5;
-  height: 70px;
-}
-
-.task-box {
-  margin: 5px;
-}
-
-.task-box .task {
-  list-style: none;
-  font-size: 17px;
-  padding-bottom: 16px;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #ccc;
-}
-
-.task-box.task:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.task label {
+.heading,
+.add-list {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 150px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(170, 169, 169);
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.far {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgb(170, 169, 169);
+}
+
+.click {
+  background: moccasin;
+}
+
+p {
+  padding: 10px;
+}
+
+main {
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.icon .fas {
+  display: flex;
+  color: rgb(92, 91, 91);
+  cursor: move;
+}
+
+.list-text {
+  width: 100%;
+  font-size: 16px;
+}
+
+.input {
+  display: flex;
+  align-items: baseline;
   gap: 10px;
 }
 
-.task label p.checked {
+.check:checked+.list-text {
   text-decoration: line-through;
 }
 
-.task label input {
-  margin-top: 6px;
-}
-
-.task .settings {
+.remove {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(223, 219, 219);
   cursor: pointer;
-  position: relative;
-}
-
-.settings .task-menu {
-  position: absolute;
-  padding: 5px 0;
-  right: -15px;
-  bottom: -10px;
-  z-index: 2;
-  transform: scale(0);
-  transform-origin: top right;
-  transition: transform 0.2 ease;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-}
-
-.uil {
-  font-size: 24px;
-}
-
-.settings:hover .task-menu {
-  transform: scale(1);
-}
-
-.task-menu li {
-  height: 25px;
-  font-size: 160px;
-  padding: 17px 15px;
-  margin-bottom: 2px;
-  justify-content: flex-start;
-}
-
-.task-menu li:last-child {
-  margin-bottom: 0;
-}
-
-.task-menu li:hover {
-  background: #f5f5f5;
-}
-
-.task-menu li i {
-  padding-right: 8px;
-}
-
-.crosshair {
-  cursor: crosshair;
 }
