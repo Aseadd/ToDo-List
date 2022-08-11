@@ -63,6 +63,7 @@ export default function showAllTodo(tasks) {
       const { id } = box.parentNode.parentNode;
       const currentTask = tasks.list.find((t) => t.index === +id);
       currentTask.completed = box.checked;
+      currentTask.completed = true;
       tasks.updateTodo(currentTask);
     });
   });
