@@ -4,17 +4,16 @@ export default function showAllTodo(tasks) {
 
   tasks.list.forEach((listItem) => {
     listElement.innerHTML += `<div class="row" id="${listItem.index}">
-            <div class="input">
-            <input type="checkbox" class="check" ${listItem.completed ? 'checked' : ''
+    <div class="input">
+     <input type="checkbox" class="check" ${listItem.completed ? 'checked' : ''
  }>
-            <input class="list-text" value="${listItem.description}" readonly>
-            </div>
-            <div class="icon">
-            <i class="fas fa-ellipsis-v"></i>
-            <i class="far fa-trash-alt hidden"></i>
-            </div>
-        </div>
-      `;
+      <input class="list-text" value="${listItem.description}" readonly>
+     </div>
+     <div class="icon">
+      <i class="fas fa-ellipsis-v"></i>
+        <i class="far fa-trash-alt hidden"></i>
+     </div>
+    </div>`;
   });
 
   document.querySelectorAll('.list-text').forEach((inp) => {
