@@ -78,7 +78,7 @@ main {
   gap: 10px;
 }
 
-.check:checked+.list-text {
+.check:checked + .list-text {
   text-decoration: line-through;
 }
 
