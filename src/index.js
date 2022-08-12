@@ -1,6 +1,7 @@
 import './style.css';
 import Tasks from './task.js';
 import showAllTodo from './function.js';
+// import slist from './drag.js';
 
 const todos = new Tasks();
 
@@ -14,6 +15,7 @@ form.addEventListener('submit', (e) => {
   form.reset();
   todos.addTodo(items);
   showAllTodo(todos);
+  // slist(todos);
 });
 
 showAllTodo(todos);
