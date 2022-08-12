@@ -88,3 +88,21 @@ main {
   background-color: rgb(223, 219, 219);
   cursor: pointer;
 }
+
+.list .hint {
+  background: #fff;
+}
+
+.list input .hint {
+  background: #cbc8c7;
+}
+
+.list .active {
+  border: 1px solid #ffa5a5;
+  background: #ea7575;
+}
+
+.list .input :last-child .list-text .active {
+  border: 1px solid #ffa5a5;
+  background: #ea7575;
+}
