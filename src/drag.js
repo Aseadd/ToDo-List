@@ -1,14 +1,13 @@
-let target = document.querySelector('.list');
-export default function slist(target) {
-  //target.classList.add('slist');
-  let items = target.getElementsByTagName('div');
+document.querySelector('.list');
+export default function slist() {
+  const items = document.getElementsByTagName('div');
   let current = null;
   for (let i of items) {
     i.draggable = true;
 
     i.ondragstart = (ev) => {
       current = i;
-      for (let it of items) {
+      for (const it of items) {
         if (it != current) {
           it.classList.add('hint');
         }
@@ -16,7 +15,7 @@ export default function slist(target) {
     };
 
     i.ondragenter = (ev) => {
-      if (i != current) {
+      if (i !== current) {
         i.classList.add('active');
       }
     };
@@ -26,7 +25,7 @@ export default function slist(target) {
     };
 
     i.ondragend = () => {
-      for (let it of items) {
+      for (const it of items) {
         it.classList.remove('hint');
         it.classList.remove('active');
       }
@@ -41,11 +40,11 @@ export default function slist(target) {
       if (i != current) {
         let currentpos = 0,
           droppedpos = 0;
-        for (let it = 0; it < items.length; it++) {
-          if (current == items[it]) {
+        for (const it = 0; it < items.length; it++) {
+          if (current === items[it]) {
             currentpos = it;
           }
-          if (i == items[it]) {
+          if (i === items[it]) {
             droppedpos = it;
           }
         }

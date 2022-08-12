@@ -15,7 +15,7 @@ form.addEventListener('submit', (e) => {
   form.reset();
   todos.addTodo(items);
   showAllTodo(todos);
-  slist(todos);
+  slist();
 });
 
 showAllTodo(todos);
@@ -26,16 +26,3 @@ clear.addEventListener('click', () => {
   todos.clearAll();
   showAllTodo(todos);
 });
-
-let isRight = 'Not In Order!';
-
-const genRandom = (array) => {
-  base = array.slice();
-  randomized = array.sort(() => Math.random() - 0.5);
-  if (randomized.join('') !== base.join('')) {
-    showAllTodo(randomized);
-  } else {
-    //recursion to account if the randomization returns the original array
-    genRandom();
-  }
-};
