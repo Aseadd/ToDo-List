@@ -5,7 +5,7 @@ export default function slist() {
   for (const i of items) {
     i.draggable = true;
 
-    i.ondragstart = (ev) => {
+    i.ondragstart = () => {
       current = i;
       for (const it of items) {
         if (it !== current) {
