@@ -1,4 +1,3 @@
-/* eslint-disable */
 document.querySelector('.list');
 export default function slist() {
   const items = document.getElementsByTagName('div');
