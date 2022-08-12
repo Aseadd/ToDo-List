@@ -3,7 +3,7 @@ export default function showAllTodo(tasks) {
   listElement.innerHTML = '';
 
   tasks.list.forEach((listItem) => {
-    listElement.innerHTML += `<div class="row" id="${listItem.index}">
+    listElement.innerHTML += `<div class="row" id="${listItem.index}" >
             <div class="input">
             <input type="checkbox" class="check" ${
               listItem.completed ? 'checked' : ''
