@@ -6,7 +6,7 @@ export default function showAllTodo(tasks) {
     listElement.innerHTML += `<div class="row" id="${listItem.index}" >
             <div class="input">
             <input type="checkbox" class="check" ${
-    listItem.completed ? 'checked' : ''
+  listItem.completed ? 'checked' : ''
 }>
             <input class="list-text" value="${listItem.description}" readonly>
             </div>
