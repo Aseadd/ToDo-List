@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */
 document.querySelector('.list');
 export default function slist() {
   const items = document.getElementsByTagName('div');
