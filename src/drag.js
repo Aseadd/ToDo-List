@@ -2,19 +2,19 @@ document.querySelector('.list');
 export default function slist() {
   const items = document.getElementsByTagName('div');
   let current = null;
-  for (let i of items) {
+  for (const i of items) {
     i.draggable = true;
 
     i.ondragstart = (ev) => {
       current = i;
       for (const it of items) {
-        if (it != current) {
+        if (it !== current) {
           it.classList.add('hint');
         }
       }
     };
 
-    i.ondragenter = (ev) => {
+    i.ondragenter = () => {
       if (i !== current) {
         i.classList.add('active');
       }
@@ -37,10 +37,10 @@ export default function slist() {
 
     i.ondrop = (evt) => {
       evt.preventDefault();
-      if (i != current) {
-        let currentpos = 0,
-          droppedpos = 0;
-        for (const it = 0; it < items.length; it++) {
+      if (i !== current) {
+        let currentpos = 0;
+        let droppedpos = 0;
+        for (let it = 0; it < items.length; it += 1) {
           if (current === items[it]) {
             currentpos = it;
           }
