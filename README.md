@@ -9,6 +9,10 @@ This project is Todo list Application
 - JS-ES6
 - Webpack
 
+## Live Demo
+
+[Live Demo](https://aseadd.github.io/ToDo-List/)
+
 ## Authors
 
 👤 **Addis Tsega**
