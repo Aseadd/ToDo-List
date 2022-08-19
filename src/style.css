@@ -106,3 +106,7 @@ main {
   border: 1px solid #ffa5a5;
   background: #ea7575;
 }
+
+.edit {
+  background: rgb(231, 230, 177);
+}
