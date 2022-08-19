@@ -3,6 +3,7 @@ import CreateToDo from './construct';
 jest.mock('./task');
 //const CreateToDo = require('./construct');
 const addItem = new Tasks();
+const deleteItem = new Tasks();
 const localStorageMock = (function () {
   let store = {};
 
@@ -36,6 +37,11 @@ test('data is added into local storage', () => {
   const tasks = {
     task: [{ completed: false, description: 'json data', index: 1 }],
   };
-  Tasks.addTodo(task);
-  expect(Tasks.addTodo(task)).toEqual(tasks.task);
+  addItem.addTodo(task);
+  deleteItem.addTodo(task);
+  deleteItem.removeTodo(1);
+  describe('Checking add and delete functions', () => {
+    expect(Tasks.addTodo(task)).toEqual(tasks.task);
+  });
+  expect(deleteItem.list).toBe([]);
 });
