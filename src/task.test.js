@@ -1,47 +1,42 @@
 import Tasks from './task';
-import CreateToDo from './construct';
+import showAllTodo from './function.js';
 jest.mock('./task');
 //const CreateToDo = require('./construct');
 const addItem = new Tasks();
-const deleteItem = new Tasks();
-const localStorageMock = (function () {
-  let store = {};
+// const localStorageMock = (function () {
+//   let store = {};
 
-  return {
-    getItem(key) {
-      return store[key];
-    },
+//   return {
+//     getItem(key) {
+//       return store[key];
+//     },
 
-    setItem(key, value) {
-      store[key] = value;
-    },
+//     setItem(key, value) {
+//       store[key] = value;
+//     },
 
-    clear() {
-      store = {};
-    },
+//     clear() {
+//       store = {};
+//     },
 
-    removeItem(key) {
-      delete store[key];
-    },
+//     removeItem(key) {
+//       delete store[key];
+//     },
 
-    getAll() {
-      return store;
-    },
-  };
-})();
+//     getAll() {
+//       return store;
+//     },
+//   };
+// })();
 
-global.localStorage = localStorageMock;
-
+// global.localStorage = localStorageMock;
+const task = {
+  description: 'Test data',
+};
+const tasks = { completed: false, description: 'json data', index: 1 };
+addItem.addTodo(task);
+console.log(addItem.addTodo(task));
+console.log(tasks);
 test('data is added into local storage', () => {
-  const task = new CreateToDo(false, 'json data');
-  const tasks = {
-    task: [{ completed: false, description: 'json data', index: 1 }],
-  };
-  addItem.addTodo(task);
-  deleteItem.addTodo(task);
-  deleteItem.removeTodo(1);
-  describe('Checking add and delete functions', () => {
-    expect(Tasks.addTodo(task)).toEqual(tasks.task);
-  });
-  expect(deleteItem.list).toBe([]);
+  expect(addItem.getData()).toEqual(tasks);
 });
