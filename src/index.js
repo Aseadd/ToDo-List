@@ -1,7 +1,7 @@
 import './style.css';
 import Tasks from './task.js';
 import showAllTodo from './function.js';
-// import slist from './drag.js';
+import slist from './drag.js';
 
 const todos = new Tasks();
 
